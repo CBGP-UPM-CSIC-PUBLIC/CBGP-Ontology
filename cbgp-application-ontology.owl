@@ -569,6 +569,49 @@
     
 
 
+    <!-- https://w3id.org/CBGP-App#alta_form_motive -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#alta_form_motive">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#answers"/>
+        <rdfs:label xml:lang="en">Motive</rdfs:label>
+        <rdfs:label xml:lang="es">Motivo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#alta_form_motive_category_update -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#alta_form_motive_category_update">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#alta_form_motive"/>
+        <rdfs:label xml:lang="es">Cambio de Categoría</rdfs:label>
+        <rdfs:label xml:lang="en">Category Update</rdfs:label>
+        <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</local:answer-order>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#alta_form_motive_group_update -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#alta_form_motive_group_update">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#alta_form_motive"/>
+        <rdfs:label xml:lang="es">Cambio de Grupo</rdfs:label>
+        <rdfs:label xml:lang="en">Group Update</rdfs:label>
+        <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</local:answer-order>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#alta_form_motive_new_hire -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#alta_form_motive_new_hire">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#alta_form_motive"/>
+        <rdfs:label xml:lang="en">New Hire</rdfs:label>
+        <rdfs:label xml:lang="es">Nueva Incorporación</rdfs:label>
+        <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</local:answer-order>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/CBGP-App#andorra -->
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#andorra">
@@ -3125,6 +3168,25 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
     
 
 
+    <!-- https://w3id.org/CBGP-App#member_alta_form_motive -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#member_alta_form_motive">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:comment xml:lang="en">Motive because of which the Alta form is filled out (New hirings, updates of category or group...).</rdfs:comment>
+        <rdfs:comment xml:lang="es">Motivo por el cual se rellena el formulario de Alta para un miembro del personal. (Nuevas incorporaciones, cambios de grupo o categoría...).</rdfs:comment>
+        <rdfs:label xml:lang="en">Motive of the Alta form</rdfs:label>
+        <rdfs:label xml:lang="es">Motivo del formulario de Alta</rdfs:label>
+        <local:answer-block rdf:resource="https://w3id.org/CBGP-App#alta_form_motive"/>
+        <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
+        <local:method>motive</local:method>
+        <local:object-class>String</local:object-class>
+        <local:question-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</local:question-order>
+        <local:widget-cardinality>Single</local:widget-cardinality>
+        <local:widget-type rdf:resource="https://w3id.org/CBGP-App#radio"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/CBGP-App#member_birth_date -->
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_birth_date">
@@ -3146,6 +3208,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_category">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="en">Category</rdfs:label>
         <rdfs:label xml:lang="es">Categoría</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#categories"/>
@@ -3270,6 +3333,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_dni_nie_pas">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="en">DNI/NIE/PAS</rdfs:label>
         <rdfs:label xml:lang="es">DNI/NIE/PAS</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#FREE"/>
@@ -3304,6 +3368,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_estimated_end_date">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="en">Estimated end date</rdfs:label>
         <rdfs:label xml:lang="es">Fecha estimada de baja</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#DATE"/>
@@ -3321,6 +3386,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_funding_comments">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="es">Comentarios sobre financiación</rdfs:label>
         <rdfs:label xml:lang="en">Funding comments</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#FREE"/>
@@ -3338,6 +3404,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_gender">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="en">Gender</rdfs:label>
         <rdfs:label xml:lang="es">Género</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#gender"/>
@@ -3457,6 +3524,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_name">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="en">Name</rdfs:label>
         <rdfs:label xml:lang="es">Nombre</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#FREE"/>
@@ -3474,6 +3542,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_nationality">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="es">Nacionalidad</rdfs:label>
         <rdfs:label xml:lang="en">Nationality</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#country"/>
@@ -3568,6 +3637,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_personal_mail_address">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="es">Correo electrónico personal</rdfs:label>
         <rdfs:label xml:lang="en">Personal mail address</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#FREE"/>
@@ -3585,6 +3655,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_personal_phone_number">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="en">Personal phone number</rdfs:label>
         <rdfs:label xml:lang="es">Teléfono personal</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#FREE"/>
@@ -3653,6 +3724,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_start_date">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="es">Fecha de alta</rdfs:label>
         <rdfs:label xml:lang="en">Start date</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#DATE"/>
@@ -3687,6 +3759,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#member_surnames">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-member-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="es">Apellido(s)</rdfs:label>
         <rdfs:label xml:lang="en">Surname(s)</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#FREE"/>
@@ -4643,7 +4716,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
     <owl:Class rdf:about="https://w3id.org/CBGP-App#phytopathogenic_bacteria_pablo_emilia">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#deprecated_research_areas_groups"/>
         <rdfs:label xml:lang="es">Bacterias fitopatógenase</rdfs:label>
-        <rdfs:label xml:lang="en">Phytipathogenic bacteria</rdfs:label>
+        <rdfs:label xml:lang="en">Phytopathogenic bacteria</rdfs:label>
         <local:group-pi>Emilia López Solanilla</local:group-pi>
         <local:group-pi>Pablo Rodríguez Palenzuela</local:group-pi>
     </owl:Class>
@@ -6393,6 +6466,7 @@ honest, same as it already is for every other field on that form.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#research_areas_groups">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#answers"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-member-fields"/>
         <rdfs:label xml:lang="en">Research areas - Groups</rdfs:label>
         <rdfs:label xml:lang="es">Áreas de investigación - Grupos</rdfs:label>
     </owl:Class>
@@ -7807,6 +7881,16 @@ honest, same as it already is for every other field on that form.</rdfs:comment>
         <rdfs:label xml:lang="es">Estados Unidos de América</rdfs:label>
         <rdfs:label xml:lang="en">United States of America</rdfs:label>
         <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">197</local:answer-order>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#user-member-fields -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#user-member-fields">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#fields"/>
+        <rdfs:label xml:lang="es">Campos de Personal (Miembro - Formulario de Alta)</rdfs:label>
+        <rdfs:label xml:lang="en">User Member Fields (Alta form)</rdfs:label>
     </owl:Class>
     
 
