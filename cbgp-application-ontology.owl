@@ -1112,6 +1112,38 @@
     
 
 
+    <!-- https://w3id.org/CBGP-App#center_approval -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#center_approval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#answers"/>
+        <rdfs:label xml:lang="es">Aprobación del centro</rdfs:label>
+        <rdfs:label xml:lang="en">Center approval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#center_approval_-yes -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#center_approval_-yes">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#center_approval"/>
+        <rdfs:label xml:lang="es">Sí</rdfs:label>
+        <rdfs:label xml:lang="en">Yes</rdfs:label>
+        <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</local:answer-order>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#center_approval_no -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#center_approval_no">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#center_approval"/>
+        <rdfs:label xml:lang="en">No</rdfs:label>
+        <rdfs:label xml:lang="es">No</rdfs:label>
+        <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</local:answer-order>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/CBGP-App#centralafricanrepublic -->
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#centralafricanrepublic">
@@ -2027,8 +2059,8 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-private-research-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-project-fields"/>
-        <rdfs:label xml:lang="es">Financiación total</rdfs:label>
-        <rdfs:label xml:lang="en">Total funding</rdfs:label>
+        <rdfs:label xml:lang="es">Financiación total de Proyectos de Investigación Privados y Proyectos de Investigación Públicos de la Comisión Europea</rdfs:label>
+        <rdfs:label xml:lang="en">Total funding for Private Research Projects and Public European Commision Research Projects</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#NUM"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>total_funding</local:method>
@@ -2088,6 +2120,7 @@
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_application_url"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_call_for_proposal_title"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_institution"/>
+        <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_type"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_internal_code"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_pi_nie"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_title"/>
@@ -2173,8 +2206,8 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
     <owl:Class rdf:about="https://w3id.org/CBGP-App#european_research_project_total_overheads">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-european-research-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
-        <rdfs:label xml:lang="es">Total de costes indirectos</rdfs:label>
-        <rdfs:label xml:lang="en">Total overheads</rdfs:label>
+        <rdfs:label xml:lang="es">Total de costes indirectos de Proyectos de Investigación Privados de la Comisión Europea</rdfs:label>
+        <rdfs:label xml:lang="en">Total overheads for Public European Commision Research Projects</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#NUM"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>total_overheads</local:method>
@@ -2182,6 +2215,38 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
         <local:question-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</local:question-order>
         <local:widget-cardinality>Single</local:widget-cardinality>
         <local:widget-type rdf:resource="https://w3id.org/CBGP-App#currency"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#extension_date -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#extension_date">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#answers"/>
+        <rdfs:label xml:lang="en">Extension date</rdfs:label>
+        <rdfs:label xml:lang="es">Fecha de prórroga</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#extension_date_no -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#extension_date_no">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#extension_date"/>
+        <rdfs:label xml:lang="en">No</rdfs:label>
+        <rdfs:label xml:lang="es">No</rdfs:label>
+        <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</local:answer-order>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#extension_date_yes -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#extension_date_yes">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#extension_date"/>
+        <rdfs:label xml:lang="es">Sí</rdfs:label>
+        <rdfs:label xml:lang="en">Yes</rdfs:label>
+        <local:answer-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</local:answer-order>
     </owl:Class>
     
 
@@ -4055,6 +4120,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_application_url"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_call_for_proposal_title"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_institution"/>
+        <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_type"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_internal_code"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_pi_nie"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_title"/>
@@ -4079,8 +4145,8 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
     <owl:Class rdf:about="https://w3id.org/CBGP-App#national_regional_research_project_total_funding">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-national-regional-research-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
-        <rdfs:label xml:lang="es">Financiación total</rdfs:label>
-        <rdfs:label xml:lang="en">Total funding</rdfs:label>
+        <rdfs:label xml:lang="es">Financiación total de Proyectos de Investigación Públicos Nacionales y Regionales</rdfs:label>
+        <rdfs:label xml:lang="en">Total funding for Public National and Regional Research Projects</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#NUM"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>total_funding</local:method>
@@ -4665,8 +4731,8 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-personnel-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#user-project-fields"/>
-        <rdfs:label xml:lang="es">Financiación total</rdfs:label>
-        <rdfs:label xml:lang="en">Total funding</rdfs:label>
+        <rdfs:label xml:lang="es">Financiación total de Proyectos de Personal</rdfs:label>
+        <rdfs:label xml:lang="en">Total funding for Personnel Projects</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#NUM"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>total_funding</local:method>
@@ -5347,6 +5413,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_application_url"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_call_for_proposal_title"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_institution"/>
+        <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_type"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_internal_code"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_pi_nie"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_title"/>
@@ -5384,8 +5451,8 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
     <owl:Class rdf:about="https://w3id.org/CBGP-App#private_research_project_total_overheads">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-private-research-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
-        <rdfs:label xml:lang="es">Total de costes indirectos</rdfs:label>
-        <rdfs:label xml:lang="en">Total overheads</rdfs:label>
+        <rdfs:label xml:lang="es">Total de costes indirectos de Proyectos de Investigación Privados</rdfs:label>
+        <rdfs:label xml:lang="en">Total overheads for Private Research Projects</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#NUM"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>total_overheads</local:method>
@@ -5443,6 +5510,7 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_application_url"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_call_for_proposal_title"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_institution"/>
+        <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_funding_type"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_internal_code"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_pi_nie"/>
         <local:requires-field rdf:resource="https://w3id.org/CBGP-App#project_title"/>
@@ -5479,8 +5547,8 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
     <owl:Class rdf:about="https://w3id.org/CBGP-App#programa_propio_research_project_total_funding">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-programa-propio-research-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
-        <rdfs:label xml:lang="es">FInanciación total</rdfs:label>
-        <rdfs:label xml:lang="en">Total funding</rdfs:label>
+        <rdfs:label xml:lang="es">FInanciación total de Proyectos de Investigación Públicos Programa Propio</rdfs:label>
+        <rdfs:label xml:lang="en">Total funding for Public Programa Propio Research Projects</rdfs:label>
         <local:answer-block rdf:resource="https://w3id.org/CBGP-App#NUM"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>total_funding</local:method>
@@ -5696,6 +5764,28 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
     
 
 
+    <!-- https://w3id.org/CBGP-App#project_center_approval -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#project_center_approval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-european-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-national-regional-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-personnel-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-private-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-programa-propio-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
+        <rdfs:label xml:lang="es">Aprobación del centro</rdfs:label>
+        <rdfs:label xml:lang="en">Center approval</rdfs:label>
+        <local:answer-block rdf:resource="https://w3id.org/CBGP-App#center_approval"/>
+        <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
+        <local:method>center_approval</local:method>
+        <local:object-class>String</local:object-class>
+        <local:question-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</local:question-order>
+        <local:widget-cardinality>Single</local:widget-cardinality>
+        <local:widget-type rdf:resource="https://w3id.org/CBGP-App#radio"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/CBGP-App#project_comments -->
 
     <owl:Class rdf:about="https://w3id.org/CBGP-App#project_comments">
@@ -5769,15 +5859,15 @@ admin&apos;s review of every submitted record is what keeps it honest.</rdfs:com
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-private-research-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-programa-propio-research-project-questions"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
-        <rdfs:label xml:lang="en">End date of the extension</rdfs:label>
-        <rdfs:label xml:lang="es">Fecha de fin de la prórroga</rdfs:label>
-        <local:answer-block rdf:resource="https://w3id.org/CBGP-App#DATE"/>
+        <rdfs:label xml:lang="en">Extension</rdfs:label>
+        <rdfs:label xml:lang="es">Prórroga</rdfs:label>
+        <local:answer-block rdf:resource="https://w3id.org/CBGP-App#extension_date"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>end_date_extension</local:method>
-        <local:object-class>Date</local:object-class>
+        <local:object-class>String</local:object-class>
         <local:question-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</local:question-order>
         <local:widget-cardinality>Single</local:widget-cardinality>
-        <local:widget-type rdf:resource="https://w3id.org/CBGP-App#date"/>
+        <local:widget-type rdf:resource="https://w3id.org/CBGP-App#radio"/>
     </owl:Class>
     
 
@@ -5838,11 +5928,32 @@ PERSONNEL projects</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
         <rdfs:label xml:lang="en">Funding institution</rdfs:label>
         <rdfs:label xml:lang="es">Institución financiadora</rdfs:label>
-        <local:answer-block rdf:resource="https://w3id.org/CBGP-App#research_project_funding_institutions"/>
+        <local:answer-block rdf:resource="https://w3id.org/CBGP-App#FREE"/>
         <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
         <local:method>funding_institution</local:method>
         <local:object-class>String</local:object-class>
         <local:question-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</local:question-order>
+        <local:widget-cardinality>Single</local:widget-cardinality>
+        <local:widget-type rdf:resource="https://w3id.org/CBGP-App#text"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CBGP-App#project_funding_type -->
+
+    <owl:Class rdf:about="https://w3id.org/CBGP-App#project_funding_type">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-european-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-national-regional-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-private-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-programa-propio-research-project-questions"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CBGP-App#new-project-questions"/>
+        <rdfs:label xml:lang="en">Funding type</rdfs:label>
+        <rdfs:label xml:lang="es">Tipo de financiación</rdfs:label>
+        <local:answer-block rdf:resource="https://w3id.org/CBGP-App#research_project_funding_institutions"/>
+        <local:is-primary-id rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</local:is-primary-id>
+        <local:method>funding_type</local:method>
+        <local:object-class>String</local:object-class>
+        <local:question-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</local:question-order>
         <local:widget-cardinality>Single</local:widget-cardinality>
         <local:widget-type rdf:resource="https://w3id.org/CBGP-App#radio"/>
     </owl:Class>
